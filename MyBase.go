@@ -1,4 +1,4 @@
-package baseObj
+package MyBase
 
 import (
 	"encoding/json"

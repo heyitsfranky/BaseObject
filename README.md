@@ -1,26 +1,26 @@
-# BaseObject
+# MyBase
 
-The **BaseObject** package serves as a foundation for common utility functions for any type of struct that can be used across multiple projects (e.g. services). I find these incredibly useful, and hopefully you do as well!
+The **MyBase** package serves as a foundation for common utility functions for any type of struct that can be used across multiple projects (e.g. services). I find these incredibly useful, and hopefully you do as well!
 
 Feel free to incorporate this package into your projects and adapt it to your specific needs. It's designed to simplify your development tasks and improve code quality by providing a solid base for common operations.
 
 ## Installation
 
-To use **BaseObject** in your Go project, you can simply run:
+To use **MyBase** in your Go project, you can simply run:
 
 ```bash
-go get github.com/heyitsfranky/BaseObject@latest
+go get github.com/heyitsfranky/MyBase@latest
 ```
 
 ## Usage
 
-Here's a basic example of how to use some of the functionalities of **BaseObject**:
+Here's a basic example of how to use some of the functionalities of **MyBase**:
 ```go
 package main
 
 import (
 	"fmt"
-	"github.com/heyitsfranky/BaseObject"
+	"github.com/heyitsfranky/MyBase"
 )
 
 type SampleStruct struct {
@@ -34,7 +34,7 @@ func main() {
 	myStruct := SampleStruct{Name: "John Doe", Age: 30, Email: "john@example.com"}
 
 	// Convert myStruct to a map
-	myMap, err := baseObj.ObjectToMap(&myStruct)
+	myMap, err := MyBase.ObjectToMap(&myStruct)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -42,7 +42,7 @@ func main() {
 
     // Convert a map to a SampleStruct
     data := map[string]interface{}{"name": "John the Second", "age": 29, "email": "john2@example.com"}
-	result, err := MapToObject[SampleStruct](data)
+	result, err := MyBase.MapToObject[SampleStruct](data)
 	if err != nil {
 		fmt.Println(err)
 		return

@@ -1,3 +1,3 @@
-module github.com/heyitsfranky/BaseObject
+module github.com/heyitsfranky/MyBase
 
 go 1.20
